@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c2da46470df44a509443f84bfcf1fe91" Name="Diagram1">
+        <EntityTypeShape EntityType="GUIA_ENTRENAMIENTOModel.ADMINISTRADOR" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GUIA_ENTRENAMIENTOModel.CLIENTE" Width="1.5" PointX="7.5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GUIA_ENTRENAMIENTOModel.COMIDA" Width="1.5" PointX="9.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GUIA_ENTRENAMIENTOModel.DIETA" Width="1.5" PointX="7.5" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GUIA_ENTRENAMIENTOModel.EJERCICIO" Width="1.5" PointX="7.5" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="GUIA_ENTRENAMIENTOModel.ENTRENADORES" Width="1.5" PointX="7.5" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GUIA_ENTRENAMIENTOModel.ENTRENAMIENTO" Width="1.5" PointX="9.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GUIA_ENTRENAMIENTOModel.ESTABLECIMIENTO" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GUIA_ENTRENAMIENTOModel.LOCALIDAD" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GUIA_ENTRENAMIENTOModel.PROVINCIA" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GUIA_ENTRENAMIENTOModel.TIPO_EJERCICIO" Width="1.5" PointX="9.75" PointY="15.75" IsExpanded="true" />
+        <AssociationConnector Association="GUIA_ENTRENAMIENTOModel.FK_ADMINIST_CONTROLA_ESTABLEC" ManuallyRouted="false" />
+        <AssociationConnector Association="GUIA_ENTRENAMIENTOModel.FK_CLIENTE_PERTENECE_ESTABLEC" ManuallyRouted="false" />
+        <AssociationConnector Association="GUIA_ENTRENAMIENTOModel.FK_ENTRENAM_ACOGE_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="GUIA_ENTRENAMIENTOModel.FK_COMIDA_NECESITAR_DIETA" ManuallyRouted="false" />
+        <AssociationConnector Association="GUIA_ENTRENAMIENTOModel.FK_ENTRENAM_RELATIONS_DIETA" ManuallyRouted="false" />
+        <AssociationConnector Association="GUIA_ENTRENAMIENTOModel.FK_ENTRENAM_RELATIONS_EJERCICI" ManuallyRouted="false" />
+        <AssociationConnector Association="GUIA_ENTRENAMIENTOModel.FK_TIPO_EJE_NECESITA_EJERCICI" ManuallyRouted="false" />
+        <AssociationConnector Association="GUIA_ENTRENAMIENTOModel.FK_ENTRENAD_TRABAJAN_ESTABLEC" ManuallyRouted="false" />
+        <AssociationConnector Association="GUIA_ENTRENAMIENTOModel.FK_ENTRENAM_BRINDA_ENTRENAD" ManuallyRouted="false" />
+        <AssociationConnector Association="GUIA_ENTRENAMIENTOModel.FK_ESTABLEC_SE_SITUA_LOCALIDA" ManuallyRouted="false" />
+        <AssociationConnector Association="GUIA_ENTRENAMIENTOModel.FK_LOCALIDA_TIENE_PROVINCI" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

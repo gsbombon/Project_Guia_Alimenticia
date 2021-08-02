@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GUIA_ENTRENAMIENTOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADMINISTRADOR">
+    <Key>
+      <PropertyRef Name="ADMIN_ID" />
+    </Key>
+    <Property Name="EST_ID" Type="int" />
+    <Property Name="ADMIN_ID" Type="int" Nullable="false" />
+    <Property Name="ADMIN_NOMBRE" Type="char" MaxLength="50" />
+    <Property Name="ADMIN_TELEFONO" Type="char" MaxLength="15" />
+    <Property Name="ADMIN_EMAIL" Type="char" MaxLength="50" />
+    <Property Name="ADMIN_APELLIDO" Type="nchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="CLI_ID" />
+    </Key>
+    <Property Name="EST_ID" Type="int" />
+    <Property Name="CLI_ID" Type="int" Nullable="false" />
+    <Property Name="CLI_NOMBRE" Type="char" MaxLength="50" />
+    <Property Name="CLI_APELLIDO" Type="char" MaxLength="50" />
+    <Property Name="CLI_EMAIL" Type="char" MaxLength="50" />
+    <Property Name="CLI_TELEFONO" Type="char" MaxLength="15" />
+    <Property Name="CLI_DIRECCION" Type="char" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="COMIDA">
+    <Key>
+      <PropertyRef Name="COM_ID" />
+    </Key>
+    <Property Name="DIE_ID" Type="int" />
+    <Property Name="COM_ID" Type="int" Nullable="false" />
+    <Property Name="COM_DESCRIPCION" Type="char" MaxLength="100" />
+    <Property Name="COM_HORARIO" Type="char" MaxLength="20" />
+    <Property Name="COM_CALORIA" Type="real" />
+    <Property Name="COM_ESTADO" Type="bit" />
+  </EntityType>
+  <EntityType Name="DIETA">
+    <Key>
+      <PropertyRef Name="DIE_ID" />
+    </Key>
+    <Property Name="DIE_ID" Type="int" Nullable="false" />
+    <Property Name="NOMBRE_DIETA" Type="char" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="EJERCICIO">
+    <Key>
+      <PropertyRef Name="EJER_ID" />
+    </Key>
+    <Property Name="EJER_ID" Type="int" Nullable="false" />
+    <Property Name="EJER_RUTINA" Type="char" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ENTRENADORES">
+    <Key>
+      <PropertyRef Name="ENT_ID" />
+    </Key>
+    <Property Name="EST_ID" Type="int" />
+    <Property Name="ENT_ID" Type="int" Nullable="false" />
+    <Property Name="ENT_NOMBRE" Type="char" MaxLength="50" />
+    <Property Name="ENT_APELLIDO" Type="char" MaxLength="50" />
+    <Property Name="ENT_TELEFONO" Type="char" MaxLength="15" />
+    <Property Name="ENT_EMAIL" Type="char" MaxLength="50" />
+    <Property Name="ENT_DIRECCION" Type="char" MaxLength="100" />
+    <Property Name="ENT_SUELDO" Type="float" />
+  </EntityType>
+  <EntityType Name="ENTRENAMIENTO">
+    <Key>
+      <PropertyRef Name="ENT_ID" />
+      <PropertyRef Name="CLI_ID" />
+    </Key>
+    <Property Name="ENT_ID" Type="int" Nullable="false" />
+    <Property Name="CLI_ID" Type="int" Nullable="false" />
+    <Property Name="EJER_ID" Type="int" />
+    <Property Name="DIE_ID" Type="int" />
+    <Property Name="FECHA" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ESTABLECIMIENTO">
+    <Key>
+      <PropertyRef Name="EST_ID" />
+    </Key>
+    <Property Name="EST_ID" Type="int" Nullable="false" />
+    <Property Name="LOCAL_ID" Type="int" />
+    <Property Name="EST_NOMBRE" Type="char" MaxLength="50" />
+    <Property Name="EST_TELEFONO" Type="char" MaxLength="15" />
+    <Property Name="EST_FECHAINAGURACION" Type="datetime" />
+  </EntityType>
+  <EntityType Name="LOCALIDAD">
+    <Key>
+      <PropertyRef Name="LOCAL_ID" />
+    </Key>
+    <Property Name="PROV_ID" Type="int" />
+    <Property Name="LOCAL_ID" Type="int" Nullable="false" />
+    <Property Name="LOCAL_COD_POSTAL" Type="char" MaxLength="50" />
+    <Property Name="LOCAL_CUIDAD" Type="char" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PROVINCIA">
+    <Key>
+      <PropertyRef Name="PROV_ID" />
+    </Key>
+    <Property Name="PROV_ID" Type="int" Nullable="false" />
+    <Property Name="PROV_NOMBRE" Type="char" MaxLength="50" />
+    <Property Name="PROV_REGION" Type="char" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TIPO_EJERCICIO">
+    <Key>
+      <PropertyRef Name="TIP_EJER_ID" />
+    </Key>
+    <Property Name="EJER_ID" Type="int" />
+    <Property Name="TIP_EJER_ID" Type="int" Nullable="false" />
+    <Property Name="EP_EJER_DESCRIPCION" Type="char" MaxLength="100" />
+    <Property Name="CALORIAS_GASTADAS" Type="float" />
+    <Property Name="ENFOQUE" Type="char" MaxLength="15" />
+    <Property Name="ESTADO" Type="bit" />
+  </EntityType>
+  <Association Name="FK_ADMINIST_CONTROLA_ESTABLEC">
+    <End Role="ESTABLECIMIENTO" Type="Self.ESTABLECIMIENTO" Multiplicity="0..1" />
+    <End Role="ADMINISTRADOR" Type="Self.ADMINISTRADOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTABLECIMIENTO">
+        <PropertyRef Name="EST_ID" />
+      </Principal>
+      <Dependent Role="ADMINISTRADOR">
+        <PropertyRef Name="EST_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLIENTE_PERTENECE_ESTABLEC">
+    <End Role="ESTABLECIMIENTO" Type="Self.ESTABLECIMIENTO" Multiplicity="0..1" />
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTABLECIMIENTO">
+        <PropertyRef Name="EST_ID" />
+      </Principal>
+      <Dependent Role="CLIENTE">
+        <PropertyRef Name="EST_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMIDA_NECESITAR_DIETA">
+    <End Role="DIETA" Type="Self.DIETA" Multiplicity="0..1" />
+    <End Role="COMIDA" Type="Self.COMIDA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIETA">
+        <PropertyRef Name="DIE_ID" />
+      </Principal>
+      <Dependent Role="COMIDA">
+        <PropertyRef Name="DIE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ENTRENAD_TRABAJAN_ESTABLEC">
+    <End Role="ESTABLECIMIENTO" Type="Self.ESTABLECIMIENTO" Multiplicity="0..1" />
+    <End Role="ENTRENADORES" Type="Self.ENTRENADORES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTABLECIMIENTO">
+        <PropertyRef Name="EST_ID" />
+      </Principal>
+      <Dependent Role="ENTRENADORES">
+        <PropertyRef Name="EST_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ENTRENAM_ACOGE_CLIENTE">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="1" />
+    <End Role="ENTRENAMIENTO" Type="Self.ENTRENAMIENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="CLI_ID" />
+      </Principal>
+      <Dependent Role="ENTRENAMIENTO">
+        <PropertyRef Name="CLI_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ENTRENAM_BRINDA_ENTRENAD">
+    <End Role="ENTRENADORES" Type="Self.ENTRENADORES" Multiplicity="1" />
+    <End Role="ENTRENAMIENTO" Type="Self.ENTRENAMIENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ENTRENADORES">
+        <PropertyRef Name="ENT_ID" />
+      </Principal>
+      <Dependent Role="ENTRENAMIENTO">
+        <PropertyRef Name="ENT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ENTRENAM_RELATIONS_DIETA">
+    <End Role="DIETA" Type="Self.DIETA" Multiplicity="0..1" />
+    <End Role="ENTRENAMIENTO" Type="Self.ENTRENAMIENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIETA">
+        <PropertyRef Name="DIE_ID" />
+      </Principal>
+      <Dependent Role="ENTRENAMIENTO">
+        <PropertyRef Name="DIE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ENTRENAM_RELATIONS_EJERCICI">
+    <End Role="EJERCICIO" Type="Self.EJERCICIO" Multiplicity="0..1" />
+    <End Role="ENTRENAMIENTO" Type="Self.ENTRENAMIENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EJERCICIO">
+        <PropertyRef Name="EJER_ID" />
+      </Principal>
+      <Dependent Role="ENTRENAMIENTO">
+        <PropertyRef Name="EJER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ESTABLEC_SE_SITUA_LOCALIDA">
+    <End Role="LOCALIDAD" Type="Self.LOCALIDAD" Multiplicity="0..1" />
+    <End Role="ESTABLECIMIENTO" Type="Self.ESTABLECIMIENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOCALIDAD">
+        <PropertyRef Name="LOCAL_ID" />
+      </Principal>
+      <Dependent Role="ESTABLECIMIENTO">
+        <PropertyRef Name="LOCAL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LOCALIDA_TIENE_PROVINCI">
+    <End Role="PROVINCIA" Type="Self.PROVINCIA" Multiplicity="0..1" />
+    <End Role="LOCALIDAD" Type="Self.LOCALIDAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVINCIA">
+        <PropertyRef Name="PROV_ID" />
+      </Principal>
+      <Dependent Role="LOCALIDAD">
+        <PropertyRef Name="PROV_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TIPO_EJE_NECESITA_EJERCICI">
+    <End Role="EJERCICIO" Type="Self.EJERCICIO" Multiplicity="0..1" />
+    <End Role="TIPO_EJERCICIO" Type="Self.TIPO_EJERCICIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EJERCICIO">
+        <PropertyRef Name="EJER_ID" />
+      </Principal>
+      <Dependent Role="TIPO_EJERCICIO">
+        <PropertyRef Name="EJER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GUIA_ENTRENAMIENTOModelStoreContainer">
+    <EntitySet Name="ADMINISTRADOR" EntityType="Self.ADMINISTRADOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMIDA" EntityType="Self.COMIDA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DIETA" EntityType="Self.DIETA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EJERCICIO" EntityType="Self.EJERCICIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ENTRENADORES" EntityType="Self.ENTRENADORES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ENTRENAMIENTO" EntityType="Self.ENTRENAMIENTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ESTABLECIMIENTO" EntityType="Self.ESTABLECIMIENTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOCALIDAD" EntityType="Self.LOCALIDAD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROVINCIA" EntityType="Self.PROVINCIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPO_EJERCICIO" EntityType="Self.TIPO_EJERCICIO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ADMINIST_CONTROLA_ESTABLEC" Association="Self.FK_ADMINIST_CONTROLA_ESTABLEC">
+      <End Role="ESTABLECIMIENTO" EntitySet="ESTABLECIMIENTO" />
+      <End Role="ADMINISTRADOR" EntitySet="ADMINISTRADOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLIENTE_PERTENECE_ESTABLEC" Association="Self.FK_CLIENTE_PERTENECE_ESTABLEC">
+      <End Role="ESTABLECIMIENTO" EntitySet="ESTABLECIMIENTO" />
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMIDA_NECESITAR_DIETA" Association="Self.FK_COMIDA_NECESITAR_DIETA">
+      <End Role="DIETA" EntitySet="DIETA" />
+      <End Role="COMIDA" EntitySet="COMIDA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ENTRENAD_TRABAJAN_ESTABLEC" Association="Self.FK_ENTRENAD_TRABAJAN_ESTABLEC">
+      <End Role="ESTABLECIMIENTO" EntitySet="ESTABLECIMIENTO" />
+      <End Role="ENTRENADORES" EntitySet="ENTRENADORES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ENTRENAM_ACOGE_CLIENTE" Association="Self.FK_ENTRENAM_ACOGE_CLIENTE">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="ENTRENAMIENTO" EntitySet="ENTRENAMIENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ENTRENAM_BRINDA_ENTRENAD" Association="Self.FK_ENTRENAM_BRINDA_ENTRENAD">
+      <End Role="ENTRENADORES" EntitySet="ENTRENADORES" />
+      <End Role="ENTRENAMIENTO" EntitySet="ENTRENAMIENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ENTRENAM_RELATIONS_DIETA" Association="Self.FK_ENTRENAM_RELATIONS_DIETA">
+      <End Role="DIETA" EntitySet="DIETA" />
+      <End Role="ENTRENAMIENTO" EntitySet="ENTRENAMIENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ENTRENAM_RELATIONS_EJERCICI" Association="Self.FK_ENTRENAM_RELATIONS_EJERCICI">
+      <End Role="EJERCICIO" EntitySet="EJERCICIO" />
+      <End Role="ENTRENAMIENTO" EntitySet="ENTRENAMIENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ESTABLEC_SE_SITUA_LOCALIDA" Association="Self.FK_ESTABLEC_SE_SITUA_LOCALIDA">
+      <End Role="LOCALIDAD" EntitySet="LOCALIDAD" />
+      <End Role="ESTABLECIMIENTO" EntitySet="ESTABLECIMIENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LOCALIDA_TIENE_PROVINCI" Association="Self.FK_LOCALIDA_TIENE_PROVINCI">
+      <End Role="PROVINCIA" EntitySet="PROVINCIA" />
+      <End Role="LOCALIDAD" EntitySet="LOCALIDAD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TIPO_EJE_NECESITA_EJERCICI" Association="Self.FK_TIPO_EJE_NECESITA_EJERCICI">
+      <End Role="EJERCICIO" EntitySet="EJERCICIO" />
+      <End Role="TIPO_EJERCICIO" EntitySet="TIPO_EJERCICIO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GUIA_ENTRENAMIENTOModelStoreContainer" CdmEntityContainer="GUIA_ENTRENAMIENTOEntities">
+    <EntitySetMapping Name="ADMINISTRADOR">
+      <EntityTypeMapping TypeName="GUIA_ENTRENAMIENTOModel.ADMINISTRADOR">
+        <MappingFragment StoreEntitySet="ADMINISTRADOR">
+          <ScalarProperty Name="EST_ID" ColumnName="EST_ID" />
+          <ScalarProperty Name="ADMIN_ID" ColumnName="ADMIN_ID" />
+          <ScalarProperty Name="ADMIN_NOMBRE" ColumnName="ADMIN_NOMBRE" />
+          <ScalarProperty Name="ADMIN_TELEFONO" ColumnName="ADMIN_TELEFONO" />
+          <ScalarProperty Name="ADMIN_EMAIL" ColumnName="ADMIN_EMAIL" />
+          <ScalarProperty Name="ADMIN_APELLIDO" ColumnName="ADMIN_APELLIDO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTE">
+      <EntityTypeMapping TypeName="GUIA_ENTRENAMIENTOModel.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="EST_ID" ColumnName="EST_ID" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+          <ScalarProperty Name="CLI_NOMBRE" ColumnName="CLI_NOMBRE" />
+          <ScalarProperty Name="CLI_APELLIDO" ColumnName="CLI_APELLIDO" />
+          <ScalarProperty Name="CLI_EMAIL" ColumnName="CLI_EMAIL" />
+          <ScalarProperty Name="CLI_TELEFONO" ColumnName="CLI_TELEFONO" />
+          <ScalarProperty Name="CLI_DIRECCION" ColumnName="CLI_DIRECCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMIDA">
+      <EntityTypeMapping TypeName="GUIA_ENTRENAMIENTOModel.COMIDA">
+        <MappingFragment StoreEntitySet="COMIDA">
+          <ScalarProperty Name="DIE_ID" ColumnName="DIE_ID" />
+          <ScalarProperty Name="COM_ID" ColumnName="COM_ID" />
+          <ScalarProperty Name="COM_DESCRIPCION" ColumnName="COM_DESCRIPCION" />
+          <ScalarProperty Name="COM_HORARIO" ColumnName="COM_HORARIO" />
+          <ScalarProperty Name="COM_CALORIA" ColumnName="COM_CALORIA" />
+          <ScalarProperty Name="COM_ESTADO" ColumnName="COM_ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIETA">
+      <EntityTypeMapping TypeName="GUIA_ENTRENAMIENTOModel.DIETA">
+        <MappingFragment StoreEntitySet="DIETA">
+          <ScalarProperty Name="DIE_ID" ColumnName="DIE_ID" />
+          <ScalarProperty Name="NOMBRE_DIETA" ColumnName="NOMBRE_DIETA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EJERCICIO">
+      <EntityTypeMapping TypeName="GUIA_ENTRENAMIENTOModel.EJERCICIO">
+        <MappingFragment StoreEntitySet="EJERCICIO">
+          <ScalarProperty Name="EJER_ID" ColumnName="EJER_ID" />
+          <ScalarProperty Name="EJER_RUTINA" ColumnName="EJER_RUTINA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ENTRENADORES">
+      <EntityTypeMapping TypeName="GUIA_ENTRENAMIENTOModel.ENTRENADORES">
+        <MappingFragment StoreEntitySet="ENTRENADORES">
+          <ScalarProperty Name="EST_ID" ColumnName="EST_ID" />
+          <ScalarProperty Name="ENT_ID" ColumnName="ENT_ID" />
+          <ScalarProperty Name="ENT_NOMBRE" ColumnName="ENT_NOMBRE" />
+          <ScalarProperty Name="ENT_APELLIDO" ColumnName="ENT_APELLIDO" />
+          <ScalarProperty Name="ENT_TELEFONO" ColumnName="ENT_TELEFONO" />
+          <ScalarProperty Name="ENT_EMAIL" ColumnName="ENT_EMAIL" />
+          <ScalarProperty Name="ENT_DIRECCION" ColumnName="ENT_DIRECCION" />
+          <ScalarProperty Name="ENT_SUELDO" ColumnName="ENT_SUELDO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ENTRENAMIENTO">
+      <EntityTypeMapping TypeName="GUIA_ENTRENAMIENTOModel.ENTRENAMIENTO">
+        <MappingFragment StoreEntitySet="ENTRENAMIENTO">
+          <ScalarProperty Name="ENT_ID" ColumnName="ENT_ID" />
+          <ScalarProperty Name="CLI_ID" ColumnName="CLI_ID" />
+          <ScalarProperty Name="EJER_ID" ColumnName="EJER_ID" />
+          <ScalarProperty Name="DIE_ID" ColumnName="DIE_ID" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTABLECIMIENTO">
+      <EntityTypeMapping TypeName="GUIA_ENTRENAMIENTOModel.ESTABLECIMIENTO">
+        <MappingFragment StoreEntitySet="ESTABLECIMIENTO">
+          <ScalarProperty Name="EST_ID" ColumnName="EST_ID" />
+          <ScalarProperty Name="LOCAL_ID" ColumnName="LOCAL_ID" />
+          <ScalarProperty Name="EST_NOMBRE" ColumnName="EST_NOMBRE" />
+          <ScalarProperty Name="EST_TELEFONO" ColumnName="EST_TELEFONO" />
+          <ScalarProperty Name="EST_FECHAINAGURACION" ColumnName="EST_FECHAINAGURACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOCALIDAD">
+      <EntityTypeMapping TypeName="GUIA_ENTRENAMIENTOModel.LOCALIDAD">
+        <MappingFragment StoreEntitySet="LOCALIDAD">
+          <ScalarProperty Name="PROV_ID" ColumnName="PROV_ID" />
+          <ScalarProperty Name="LOCAL_ID" ColumnName="LOCAL_ID" />
+          <ScalarProperty Name="LOCAL_COD_POSTAL" ColumnName="LOCAL_COD_POSTAL" />
+          <ScalarProperty Name="LOCAL_CUIDAD" ColumnName="LOCAL_CUIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROVINCIA">
+      <EntityTypeMapping TypeName="GUIA_ENTRENAMIENTOModel.PROVINCIA">
+        <MappingFragment StoreEntitySet="PROVINCIA">
+          <ScalarProperty Name="PROV_ID" ColumnName="PROV_ID" />
+          <ScalarProperty Name="PROV_NOMBRE" ColumnName="PROV_NOMBRE" />
+          <ScalarProperty Name="PROV_REGION" ColumnName="PROV_REGION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_EJERCICIO">
+      <EntityTypeMapping TypeName="GUIA_ENTRENAMIENTOModel.TIPO_EJERCICIO">
+        <MappingFragment StoreEntitySet="TIPO_EJERCICIO">
+          <ScalarProperty Name="EJER_ID" ColumnName="EJER_ID" />
+          <ScalarProperty Name="TIP_EJER_ID" ColumnName="TIP_EJER_ID" />
+          <ScalarProperty Name="EP_EJER_DESCRIPCION" ColumnName="EP_EJER_DESCRIPCION" />
+          <ScalarProperty Name="CALORIAS_GASTADAS" ColumnName="CALORIAS_GASTADAS" />
+          <ScalarProperty Name="ENFOQUE" ColumnName="ENFOQUE" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
