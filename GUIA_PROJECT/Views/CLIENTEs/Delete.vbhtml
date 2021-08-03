@@ -22,7 +22,7 @@ End Code
             </dd>
 
             <dt>
-                APELLIDS
+                APELLIDO
             </dt>
 
             <dd>

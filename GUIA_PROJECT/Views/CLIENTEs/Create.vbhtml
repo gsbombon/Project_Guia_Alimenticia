@@ -76,12 +76,11 @@ End Code
             </div>
         </div>
     End Using
-<div class="align-items-center">
-    <p class="btn btn-block btn-dark mt-2 mb-2 text-white">
-            @Html.ActionLink("Regresar a la Lista", "Index")
-     </p>
-    
-</div>
+    <div class="align-items-center">
+        <p class="btn btn-block btn-dark mt-2 mb-2 text-white">
+                @Html.ActionLink("Regresar a la Lista", "Index")
+        </p>
+    </div>
 
 </div>
 

@@ -4,76 +4,81 @@
     Layout = "~/Views/Shared/_Layout.vbhtml"
 End Code
 
-<h2>Delete</h2>
+<div class="container mt-5 pt-5 pb-5">
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>ENTRENADORES</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ENT_NOMBRE)
-        </dt>
+    <h2>ELIMINAR ENTRENADOR </h2>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ENT_NOMBRE)
-        </dd>
+    <h3>Seguro desea eliminar al entrenador ? </h3>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                NOMBRE
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ENT_APELLIDO)
-        </dt>
+            <dd>
+                @Html.DisplayFor(Function(model) model.ENT_NOMBRE)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ENT_APELLIDO)
-        </dd>
+            <dt>
+                APELLIDO
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ENT_TELEFONO)
-        </dt>
+            <dd>
+                @Html.DisplayFor(Function(model) model.ENT_APELLIDO)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ENT_TELEFONO)
-        </dd>
+            <dt>
+                TELEFONO
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ENT_EMAIL)
-        </dt>
+            <dd>
+                @Html.DisplayFor(Function(model) model.ENT_TELEFONO)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ENT_EMAIL)
-        </dd>
+            <dt>
+                EMAIL
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ENT_DIRECCION)
-        </dt>
+            <dd>
+                @Html.DisplayFor(Function(model) model.ENT_EMAIL)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ENT_DIRECCION)
-        </dd>
+            <dt>
+                DIRECCION
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ENT_SUELDO)
-        </dt>
+            <dd>
+                @Html.DisplayFor(Function(model) model.ENT_DIRECCION)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ENT_SUELDO)
-        </dd>
+            <dt>
+                SUELDO
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ESTABLECIMIENTO.EST_NOMBRE)
-        </dt>
+            <dd>
+                @Html.DisplayFor(Function(model) model.ENT_SUELDO)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ESTABLECIMIENTO.EST_NOMBRE)
-        </dd>
+            <dt>
+                ESTABLECIMIENTO
+            </dt>
 
-    </dl>
-    @Using (Html.BeginForm())
-        @Html.AntiForgeryToken()
+            <dd>
+                @Html.DisplayFor(Function(model) model.ESTABLECIMIENTO.EST_NOMBRE)
+            </dd>
 
-        @<div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    End Using
+        </dl>
+        @Using (Html.BeginForm())
+            @Html.AntiForgeryToken()
+
+
+            @<div class="form-actions no-color">
+                <input type="submit" value="Eliminar" class="btn btn-block btn-danger mt-2 mb-2 text-white" />
+                <p class="btn btn-block btn-dark mt-2 mb-2 text-white">
+                    @Html.ActionLink("Regresar a la Lista", "Index")
+                </p>
+            </div>
+        End Using
+    </div>
 </div>

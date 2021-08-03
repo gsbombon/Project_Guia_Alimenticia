@@ -4,71 +4,79 @@
     Layout = "~/Views/Shared/_Layout.vbhtml"
 End Code
 
-<h2>Details</h2>
 
-<div>
-    <h4>ENTRENADORES</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ENT_NOMBRE)
-        </dt>
+<div class="container mt-5 pt-5 pb-5">
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ENT_NOMBRE)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ENT_APELLIDO)
-        </dt>
+    <h2>DETALLES DEL CLIENTE</h2>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ENT_APELLIDO)
-        </dd>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                NOMBRE
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ENT_TELEFONO)
-        </dt>
+            <dd>
+                @Html.DisplayFor(Function(model) model.ENT_NOMBRE)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ENT_TELEFONO)
-        </dd>
+            <dt>
+                APELLIDO
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ENT_EMAIL)
-        </dt>
+            <dd>
+                @Html.DisplayFor(Function(model) model.ENT_APELLIDO)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ENT_EMAIL)
-        </dd>
+            <dt>
+                TELEFONO
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ENT_DIRECCION)
-        </dt>
+            <dd>
+                @Html.DisplayFor(Function(model) model.ENT_TELEFONO)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ENT_DIRECCION)
-        </dd>
+            <dt>
+                EMAIL
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ENT_SUELDO)
-        </dt>
+            <dd>
+                @Html.DisplayFor(Function(model) model.ENT_EMAIL)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ENT_SUELDO)
-        </dd>
+            <dt>
+                DIRECCION
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ESTABLECIMIENTO.EST_NOMBRE)
-        </dt>
+            <dd>
+                @Html.DisplayFor(Function(model) model.ENT_DIRECCION)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ESTABLECIMIENTO.EST_NOMBRE)
-        </dd>
+            <dt>
+                SUELDO
+            </dt>
 
-    </dl>
+            <dd>
+                @Html.DisplayFor(Function(model) model.ENT_SUELDO)
+            </dd>
+
+            <dt>
+                ESTABLECIMIENTO
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(Function(model) model.ESTABLECIMIENTO.EST_NOMBRE)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        <p class="btn btn-block btn-warning mt-2 mb-2 text-white">
+            @Html.ActionLink("Edit", "Edit", New With {.id = Model.ENT_ID})
+        </p>
+        <p class="btn btn-block btn-dark mt-2 mb-2 text-white">
+            @Html.ActionLink("Regresar a la Lista", "Index")
+        </p>
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", New With { .id = Model.ENT_ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
