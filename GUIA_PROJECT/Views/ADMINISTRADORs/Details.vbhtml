@@ -7,52 +7,61 @@ End Code
 <h2>Details</h2>
 
 <div>
-    <h4>ADMINISTRADOR</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ADMIN_NOMBRE)
-        </dt>
+    <div class="container mt-5 pt-5 pb-5">
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ADMIN_NOMBRE)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ADMIN_TELEFONO)
-        </dt>
+        <h2>DETALLES DEL ADMINISTRADOR</h2>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                NOMBRE
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ADMIN_TELEFONO)
-        </dd>
+            <dd>
+                @Html.DisplayFor(Function(model) model.ADMIN_NOMBRE)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ADMIN_EMAIL)
-        </dt>
+            <dt>
+                APELLIDOS
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ADMIN_EMAIL)
-        </dd>
+            <dd>
+                @Html.DisplayFor(Function(model) model.ADMIN_APELLIDO)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ADMIN_APELLIDO)
-        </dt>
+            <dt>
+                TELEFONO
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ADMIN_APELLIDO)
-        </dd>
+            <dd>
+                @Html.DisplayFor(Function(model) model.ADMIN_TELEFONO)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ESTABLECIMIENTO.EST_NOMBRE)
-        </dt>
+            <dt>
+                EMAIL
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ESTABLECIMIENTO.EST_NOMBRE)
-        </dd>
+            <dd>
+                @Html.DisplayFor(Function(model) model.ADMIN_EMAIL)
+            </dd>
 
-    </dl>
+            <dt>
+                ESTABLECIMIENTO
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(Function(model) model.ESTABLECIMIENTO.EST_NOMBRE)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        <p class="btn btn-block btn-warning mt-2 mb-2 text-white">
+            @Html.ActionLink("Edit", "Edit", New With {.id = Model.ADMIN_ID})
+        </p>
+        <p class="btn btn-block btn-dark mt-2 mb-2 text-white">
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </p>
+
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", New With { .id = Model.ADMIN_ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

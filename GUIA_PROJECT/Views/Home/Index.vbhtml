@@ -123,7 +123,7 @@ End Code
                     <img src="@Url.Content("~/Content/img/trainer/trainer-1.jpg")" alt="">
                     <div class="trainer-text">
                         <h5>Sawyer Bruns</h5>
-                        <span>Power Coach</span>
+                        <span>Entrenador Fuerza</span>
                         <p>
                             non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
                             voluptatem.
@@ -142,7 +142,7 @@ End Code
                     <img src="@Url.Content("~/Content/img/trainer/trainer-2.jpg")" alt="">
                     <div class="trainer-text">
                         <h5>Oren Willis</h5>
-                        <span>Gym Coach</span>
+                        <span>Entrenador Gimnasio</span>
                         <p>
                             non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
                             voluptatem.
@@ -161,7 +161,7 @@ End Code
                     <img src="@Url.Content("~/Content/img/trainer/trainer-3.jpg")" alt="">
                     <div class="trainer-text">
                         <h5>Taysha Atkinson</h5>
-                        <span>Cardio Trainer</span>
+                        <span>Entrenadora Cardio</span>
                         <p>
                             non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
                             voluptatem.

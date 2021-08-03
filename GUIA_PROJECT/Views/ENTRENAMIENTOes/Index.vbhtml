@@ -10,50 +10,51 @@ End Code
     <p class="btn btn-block btn-primary mt-2 mb-2 text-white">
         @Html.ActionLink("Agregar Entrenamiento", "Create")
     </p>
-    <table class="table">
-        <tr>
-            <th>
-                FECHA
-            </th>
-            <th>
-                NOMBRE CLIENTE
-            </th>
-            <th>
-                NOMBRE DIETA
-            </th>
-            <th>
-                RUTINA
-            </th>
-            <th>
-                ENTRENADOR 
-            </th>
-            <th></th>
-        </tr>
-
-        @For Each item In Model
-            @<tr>
-                <td>
-                    @Html.DisplayFor(Function(modelItem) item.FECHA)
-                </td>
-                <td>
-                    @Html.DisplayFor(Function(modelItem) item.CLIENTE.CLI_NOMBRE)
-                </td>
-                <td>
-                    @Html.DisplayFor(Function(modelItem) item.DIETA.NOMBRE_DIETA)
-                </td>
-                <td>
-                    @Html.DisplayFor(Function(modelItem) item.EJERCICIO.EJER_RUTINA)
-                </td>
-                <td>
-                    @Html.DisplayFor(Function(modelItem) item.ENTRENADORES.ENT_NOMBRE)
-                </td>
-                <td>
-                    @*@Html.ActionLink("Edit", "Edit", New With {.id = item.PrimaryKey}) |
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    FECHA
+                </th>
+                <th>
+                    NOMBRE CLIENTE
+                </th>
+                <th>
+                    NOMBRE DIETA
+                </th>
+                <th>
+                    RUTINA
+                </th>
+                <th>
+                    ENTRENADOR
+                </th>
+                <th></th>
+            </tr>
+            </thead>
+            @For Each item In Model
+                @<tr>
+                    <td>
+                        @Html.DisplayFor(Function(modelItem) item.FECHA)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(Function(modelItem) item.CLIENTE.CLI_NOMBRE)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(Function(modelItem) item.DIETA.NOMBRE_DIETA)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(Function(modelItem) item.EJERCICIO.EJER_RUTINA)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(Function(modelItem) item.ENTRENADORES.ENT_NOMBRE)
+                    </td>
+                    <td>
+                        @*@Html.ActionLink("Edit", "Edit", New With {.id = item.PrimaryKey}) |
                         @Html.ActionLink("Details", "Details", New With {.id = item.PrimaryKey}) |
                         @Html.ActionLink("Delete", "Delete", New With {.id = item.PrimaryKey})*@
-                </td>
-            </tr>
-        Next
+                    </td>
+                </tr>
+            Next
 
     </table>
 </div>
