@@ -8,10 +8,10 @@ End Code
         <div class="row">
             <div class="col-lg-8">
                 <div class="hero-text">
-                    <span>FITNESS ELEMENTS</span>
-                    <h1>BMI CALCULATOR</h1>
-                    <p>Gutim comes packed with the user-friendly BMI Calculator<br /> shortcode which lets</p>
-                    <a href="#" class="primary-btn">Read More</a>
+                    <span>ENTRENAMIENTOS | DIETAS</span>
+                    <h1>GUIA ENTRENAMIENTO</h1>
+                    <p>Registrate con nosotros y enmpieza a entrenar desde hoy<br /> Resultados asegurados en menos de un mes</p>
+                    <a href="#" class="primary-btn">Leer Mas</a>
                 </div>
             </div>
         </div>
@@ -24,24 +24,26 @@ End Code
         <div class="row">
             <div class="col-lg-6">
                 <div class="about-pic">
-                    <img src="img/about-pic.jpg" alt="">
+                    <img src="@Url.Content("~/Content/img/about-pic.jpg")" alt="">
                     <a href="https://www.youtube.com/watch?v=SlPhMPnQ58k" class="play-btn video-popup">
-                        <img src="img/play.png" alt="">
+                        <img src="@Url.Content("~/Content/img/play.png")" alt="">
                     </a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="about-text">
-                    <h2>Story About Us</h2>
+                    <h2>Beneficios</h2>
                     <p class="first-para">
-                        Lorem ipsum proin gravida nibh vel velit auctor aliquet. Aenean pretium
-                        sollicitudin, nascetur auci elit consequat ipsutissem niuis sed odio sit amet nibh vulputate
-                        cursus a amet.
+                        Obtén acceso ilimitado a un amplio catálogo de rutinas y
+                        programas de diferentes disciplinas para que entrenes cómo,
+                        dónde y cuando quieras... gratis y para siempre.
                     </p>
+                    <hr />
+                    <h3>Lleva tu entrenamiento contigo</h3>
+                    <p></p>
                     <p class="second-para">
-                        Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, gravida
-                        quam semper libero sit amet. Etiam rhoncus. Maecenas tempus, tellus eget condimentum
-                        rhoncus, gravida quam semper libero sit amet.
+                        Ve tus clases donde sea con acceso móvil vía iOS y Android,
+                        o web y próximamente desde tu TV.
                     </p>
                     <a href="#" class="primary-btn">Read More</a>
                 </div>
@@ -65,7 +67,7 @@ End Code
                         <div class="col-md-6">
                             <div class="services-item bg-gray">
                                 <img src="@Url.Content("~/Content/img/services/service-icon-1.png")" alt="">
-                                <h4>Strategies</h4>
+                                <h4>POWER</h4>
                                 <p>
                                     Aenean massa. Cum sociis Theme et natoque penatibus et magnis dis part urient
                                     montes.
@@ -73,7 +75,7 @@ End Code
                             </div>
                             <div class="services-item bg-gray pd-b">
                                 <img src="@Url.Content("~/Content/img/services/service-icon-3.png")" alt="">
-                                <h4>Workout</h4>
+                                <h4>KICKBOX</h4>
                                 <p>
                                     Aenean massa. Cum sociis Theme et natoque penatibus et magnis dis part urient
                                     montes.
@@ -83,15 +85,15 @@ End Code
                         <div class="col-md-6">
                             <div class="services-item">
                                 <img src="@Url.Content("~/Content/img/services/service-icon-2.png")" alt="">
-                                <h4>Yoga</h4>
+                                <h4>YOGA</h4>
                                 <p>
                                     Aenean massa. Cum sociis Theme et natoque penatibus et magnis dis part urient
                                     montes.
                                 </p>
                             </div>
                             <div class="services-item pd-b">
-                                <img src="img/services/service-icon-4.png" alt="">
-                                <h4>Weight Loss</h4>
+                                <img src="@Url.Content("~/Content/img/services/service-icon-4.png")" alt="">
+                                <h4>CARDIO</h4>
                                 <p>
                                     Aenean massa. Cum sociis Theme et natoque penatibus et magnis dis part urient
                                     montes.
@@ -111,7 +113,7 @@ End Code
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title">
-                    <h2>EXPERT TRAINERS</h2>
+                    <h2>Entrenadores Expertos</h2>
                 </div>
             </div>
         </div>
@@ -120,8 +122,8 @@ End Code
                 <div class="single-trainer-item">
                     <img src="@Url.Content("~/Content/img/trainer/trainer-1.jpg")" alt="">
                     <div class="trainer-text">
-                        <h5>Patrick Cortez</h5>
-                        <span>Leader</span>
+                        <h5>Sawyer Bruns</h5>
+                        <span>Power Coach</span>
                         <p>
                             non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
                             voluptatem.
@@ -139,8 +141,8 @@ End Code
                 <div class="single-trainer-item">
                     <img src="@Url.Content("~/Content/img/trainer/trainer-2.jpg")" alt="">
                     <div class="trainer-text">
-                        <h5>Gregory Powers</h5>
-                        <span>Gym coach</span>
+                        <h5>Oren Willis</h5>
+                        <span>Gym Coach</span>
                         <p>
                             non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
                             voluptatem.
@@ -158,8 +160,8 @@ End Code
                 <div class="single-trainer-item">
                     <img src="@Url.Content("~/Content/img/trainer/trainer-3.jpg")" alt="">
                     <div class="trainer-text">
-                        <h5>Walter Wagner</h5>
-                        <span>Dance trainer</span>
+                        <h5>Taysha Atkinson</h5>
+                        <span>Cardio Trainer</span>
                         <p>
                             non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
                             voluptatem.

@@ -4,18 +4,18 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="footer-banner-item set-bg" data-setbg="@Url.Content("~/Content/img/footer-banner/footer-banner-1.jpg")">
-                    <span>New member</span>
-                    <h2>7 days for free</h2>
-                    <p>Complete the training sessions with us, surely you will be happy</p>
-                    <a href="#" class="primary-btn">Get Started</a>
+                    <span>Nuevo Integrante ?</span>
+                    <h2>7 días gratis</h2>
+                    <p>Completa las sesiones de entrenamiento con nosotros, seguro que te alegrarás</p>
+                    <a href="#" class="primary-btn">Comenzar </a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="footer-banner-item set-bg" data-setbg="@Url.Content("~/Content/img/footer-banner/footer-banner-2.jpg")">
-                    <span>contact us</span>
-                    <h2>09 746 204</h2>
-                    <p>If you trust us on your journey they dark sex does not disappoint you!</p>
-                    <a href="#" class="primary-btn">Get Started</a>
+                    <span>Contactanos</span>
+                    <h2>09 817 3819</h2>
+                    <p>Si confías en nosotros en tu viaje los resultados no te defrauda!</p>
+                    <a href="#" class="primary-btn">Comenzar</a>
                 </div>
             </div>
         </div>
@@ -28,43 +28,38 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="contact-option">
-                    <span>Phone</span>
-                    <p>(123) 118 9999 - (123) 118 9999</p>
+                    <span>Telefono | Celular</span>
+                    <p>(02) 189 999 - (09) 818 9917</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="contact-option">
-                    <span>Address</span>
-                    <p>72 Kangnam, 45 Opal Point Suite 391</p>
+                    <span>Direccion</span>
+                    <p>Santo Domingo y Quito, Opal Point Suite 391</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="contact-option">
                     <span>Email</span>
-                    <p>contactcompany@Gutim.com</p>
+                    <p>gsbombon@espe.edu.ec</p>
+                    <p>javelasco@espe.edu.ec</p>
                 </div>
             </div>
         </div>
         <div class="subscribe-option set-bg" data-setbg="img/footer-signup.jpg">
             <div class="so-text">
-                <h4>Subscribe To Our Mailing List</h4>
-                <p>Sign up to receive the latest information </p>
+                <h4>SUSCRÍBASE A NUESTRA LISTA DE CORREO</h4>
+                <p>Regístrese para recibir la información más reciente</p>
             </div>
             <form action="#" class="subscribe-form">
-                <input type="text" placeholder="Enter Your Mail">
+                <input type="text" placeholder="Ingrese su correo">
                 <button type="submit"><i class="fa fa-send"></i></button>
             </form>
         </div>
         <div class="copyright-text">
-            <ul>
-                <li><a href="#">Term&Use</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-            </ul>
             <p>&copy;<p>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Copyright &copy;
-                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                <script>document.write(new Date().getFullYear());</script> All rights reserved by Gerson Bombon
             </p></p>
             <div class="footer-social">
                 <a href="#"><i class="fa fa-facebook"></i></a>
