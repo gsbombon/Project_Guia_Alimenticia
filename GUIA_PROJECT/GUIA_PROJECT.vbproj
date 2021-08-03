@@ -239,19 +239,86 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\magnific-popup.css" />
+    <Content Include="Content\css\owl.carousel.min.css" />
+    <Content Include="Content\css\slicknav.min.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\img\about-pic.jpg" />
+    <Content Include="Content\img\about-signature.png" />
+    <Content Include="Content\img\award.jpg" />
+    <Content Include="Content\img\banner-bg.jpg" />
+    <Content Include="Content\img\banner-person.png" />
+    <Content Include="Content\img\blog\bd-1.jpg" />
+    <Content Include="Content\img\blog\bd-2.jpg" />
+    <Content Include="Content\img\blog\blog-1.jpg" />
+    <Content Include="Content\img\blog\blog-2.jpg" />
+    <Content Include="Content\img\blog\blog-3.jpg" />
+    <Content Include="Content\img\blog\blog-4.jpg" />
+    <Content Include="Content\img\blog\blog-5.jpg" />
+    <Content Include="Content\img\blog\blog-6.jpg" />
+    <Content Include="Content\img\blog\blog-7.jpg" />
+    <Content Include="Content\img\blog\blog-8.jpg" />
+    <Content Include="Content\img\blog\blog-9.jpg" />
+    <Content Include="Content\img\blog\blog-detail-hero.jpg" />
+    <Content Include="Content\img\blog\blog-posted.jpg" />
+    <Content Include="Content\img\breadcrumb\classes-breadcrumb.jpg" />
+    <Content Include="Content\img\classes\classes-1.jpg" />
+    <Content Include="Content\img\classes\classes-2.jpg" />
+    <Content Include="Content\img\classes\classes-3.jpg" />
+    <Content Include="Content\img\classes\classes-4.jpg" />
+    <Content Include="Content\img\classes\classes-5.jpg" />
+    <Content Include="Content\img\classes\classes-6.jpg" />
+    <Content Include="Content\img\classes\classes-7.jpg" />
+    <Content Include="Content\img\classes\classes-8.jpg" />
+    <Content Include="Content\img\classes\classes-9.jpg" />
+    <Content Include="Content\img\footer-banner\footer-banner-1.jpg" />
+    <Content Include="Content\img\footer-banner\footer-banner-2.jpg" />
+    <Content Include="Content\img\footer-signup.jpg" />
+    <Content Include="Content\img\gallery\gallery-1.jpg" />
+    <Content Include="Content\img\gallery\gallery-2.jpg" />
+    <Content Include="Content\img\gallery\gallery-3.jpg" />
+    <Content Include="Content\img\gallery\gallery-4.jpg" />
+    <Content Include="Content\img\gallery\gallery-5.jpg" />
+    <Content Include="Content\img\gallery\gallery-6.jpg" />
+    <Content Include="Content\img\gallery\gallery-7.jpg" />
+    <Content Include="Content\img\hero-bg.jpg" />
+    <Content Include="Content\img\icon\icon-1.png" />
+    <Content Include="Content\img\icon\icon-2.png" />
+    <Content Include="Content\img\icon\icon-3.png" />
+    <Content Include="Content\img\icon\location.png" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\play.png" />
+    <Content Include="Content\img\register-pic.jpg" />
+    <Content Include="Content\img\services\service-icon-1.png" />
+    <Content Include="Content\img\services\service-icon-2.png" />
+    <Content Include="Content\img\services\service-icon-3.png" />
+    <Content Include="Content\img\services\service-icon-4.png" />
+    <Content Include="Content\img\services\service-pic.jpg" />
+    <Content Include="Content\img\testimonial\quote-left.png" />
+    <Content Include="Content\img\testimonial\testimonial-1.jpg" />
+    <Content Include="Content\img\testimonial\testimonial-bg.png" />
+    <Content Include="Content\img\trainer\about-trainer-1.jpg" />
+    <Content Include="Content\img\trainer\about-trainer-2.jpg" />
+    <Content Include="Content\img\trainer\about-trainer-3.jpg" />
+    <Content Include="Content\img\trainer\trainer-1.jpg" />
+    <Content Include="Content\img\trainer\trainer-2.jpg" />
+    <Content Include="Content\img\trainer\trainer-3.jpg" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\jquery-3.3.1.min.js" />
+    <Content Include="Content\js\jquery.magnific-popup.min.js" />
+    <Content Include="Content\js\jquery.slicknav.js" />
+    <Content Include="Content\js\main.js" />
+    <Content Include="Content\js\masonry.pkgd.min.js" />
+    <Content Include="Content\js\mixitup.min.js" />
+    <Content Include="Content\js\owl.carousel.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <EntityDeploy Include="ModelGuiaEntrenamiento.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelGuiaEntrenamiento.Designer.vb</LastGenOutput>
@@ -259,6 +326,11 @@
     <Content Include="ModelGuiaEntrenamiento.edmx.diagram">
       <DependentUpon>ModelGuiaEntrenamiento.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -269,7 +341,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="ModelGuiaEntrenamiento.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModelGuiaEntrenamiento.Context.vb</LastGenOutput>
@@ -280,12 +351,6 @@
       <DependentUpon>ModelGuiaEntrenamiento.edmx</DependentUpon>
       <LastGenOutput>ModelGuiaEntrenamiento.vb</LastGenOutput>
     </Content>
-    <Content Include="Scripts\jquery-3.4.1.js" />
-    <Content Include="Scripts\jquery-3.4.1.min.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
-    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Views\CLIENTEs\Create.vbhtml" />
     <Content Include="Views\CLIENTEs\Delete.vbhtml" />
     <Content Include="Views\CLIENTEs\Details.vbhtml" />
@@ -306,18 +371,13 @@
     <Content Include="Views\ADMINISTRADORs\Details.vbhtml" />
     <Content Include="Views\ADMINISTRADORs\Edit.vbhtml" />
     <Content Include="Views\ADMINISTRADORs\Index.vbhtml" />
+    <Content Include="Views\Shared\_navigator.vbhtml" />
+    <Content Include="Views\Shared\_footer.vbhtml" />
+    <Content Include="Views\Shared\_navTemp.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -325,7 +385,6 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Content\Site.css" />
     <Content Include="Views\_ViewStart.vbhtml" />
     <Content Include="Views\Home\About.vbhtml" />
     <Content Include="Views\Home\Contact.vbhtml" />
@@ -337,6 +396,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

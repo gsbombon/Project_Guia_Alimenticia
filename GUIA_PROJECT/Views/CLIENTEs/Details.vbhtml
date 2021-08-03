@@ -4,63 +4,67 @@
     Layout = "~/Views/Shared/_Layout.vbhtml"
 End Code
 
-<h2>Details</h2>
+<div class="container mt-5 pt-5 pb-5">
 
-<div>
-    <h4>CLIENTE</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.CLI_NOMBRE)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.CLI_NOMBRE)
-        </dd>
+    <h2>DETALLES DEL CLIENTE</h2>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.CLI_APELLIDO)
-        </dt>
+    <div>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.CLI_APELLIDO)
-        </dd>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt> NOMBRE </dt>
+            <dd> @Html.DisplayFor(Function(model) model.CLI_NOMBRE) </dd>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.CLI_EMAIL)
-        </dt>
+            <dt>
+                APELLIDO
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.CLI_EMAIL)
-        </dd>
+            <dd>
+                @Html.DisplayFor(Function(model) model.CLI_APELLIDO)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.CLI_TELEFONO)
-        </dt>
+            <dt>
+                EMAIL
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.CLI_TELEFONO)
-        </dd>
+            <dd>
+                @Html.DisplayFor(Function(model) model.CLI_EMAIL)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.CLI_DIRECCION)
-        </dt>
+            <dt>
+                TELEFONO
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.CLI_DIRECCION)
-        </dd>
+            <dd>
+                @Html.DisplayFor(Function(model) model.CLI_TELEFONO)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ESTABLECIMIENTO.EST_NOMBRE)
-        </dt>
+            <dt>
+                DIRECCION
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ESTABLECIMIENTO.EST_NOMBRE)
-        </dd>
+            <dd>
+                @Html.DisplayFor(Function(model) model.CLI_DIRECCION)
+            </dd>
 
-    </dl>
+            <dt>
+                ESTABLECIMIENTO
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(Function(model) model.ESTABLECIMIENTO.EST_NOMBRE)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        <p class="btn btn-block btn-warning mt-2 mb-2 text-white">
+            @Html.ActionLink("Edit", "Edit", New With {.id = Model.CLI_ID}) 
+        </p>
+        <p class="btn btn-block btn-dark mt-2 mb-2 text-white">
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", New With { .id = Model.CLI_ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

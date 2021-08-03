@@ -16,11 +16,22 @@ Public Module BundleConfig
                     "~/Scripts/modernizr-*"))
 
         bundles.Add(New ScriptBundle("~/bundles/bootstrap").Include(
-                  "~/Scripts/bootstrap.js"))
+                  "~/Content/js/jquery-3.3.1.min.js",
+                  "~/Content/js/bootstrap.min.js",
+                  "~/Content/js/jquery.magnific-popup.min.js",
+                  "~/Content/js/mixitup.min.js",
+                  "~/Content/js/jquery.slicknav.js",
+                  "~/Content/js/owl.carousel.min.js",
+                  "~/Content/js/main.js"))
 
         bundles.Add(New StyleBundle("~/Content/css").Include(
-                  "~/Content/bootstrap.css",
-                  "~/Content/site.css"))
+                        "~/Content/css/bootstrap.min.css",
+                        "~/Content/css/font-awesome.min.css",
+                        "~/Content/css/owl.carousel.min.css",
+                        "~/Content/css/magnific-popup.css",
+                        "~/Content/css/slicknav.min.css",
+                        "~/Content/css/style.css"))
+
     End Sub
 End Module
 
