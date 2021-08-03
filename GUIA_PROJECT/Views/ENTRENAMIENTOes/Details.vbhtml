@@ -4,55 +4,60 @@
     Layout = "~/Views/Shared/_Layout.vbhtml"
 End Code
 
-<h2>Details</h2>
+<div class="container mt-5 pt-5 pb-5">
 
-<div>
-    <h4>ENTRENAMIENTO</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.FECHA)
-        </dt>
+    <h2>DETALLES DEL ENTRENAMIENTO</h2>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.FECHA)
-        </dd>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                FECHA
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.CLIENTE.CLI_NOMBRE)
-        </dt>
+            <dd>
+                @Html.DisplayFor(Function(model) model.FECHA)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.CLIENTE.CLI_NOMBRE)
-        </dd>
+            <dt>
+                NOMBRE CLIENTE
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.DIETA.NOMBRE_DIETA)
-        </dt>
+            <dd>
+                @Html.DisplayFor(Function(model) model.CLIENTE.CLI_NOMBRE)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.DIETA.NOMBRE_DIETA)
-        </dd>
+            <dt>
+                NOMBRE DIETA
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.EJERCICIO.EJER_RUTINA)
-        </dt>
+            <dd>
+                @Html.DisplayFor(Function(model) model.DIETA.NOMBRE_DIETA)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.EJERCICIO.EJER_RUTINA)
-        </dd>
+            <dt>
+                EJERCICIO RUTINA
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(Function(model) model.ENTRENADORES.ENT_NOMBRE)
-        </dt>
+            <dd>
+                @Html.DisplayFor(Function(model) model.EJERCICIO.EJER_RUTINA)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(Function(model) model.ENTRENADORES.ENT_NOMBRE)
-        </dd>
+            <dt>
+                ENTRENADOR
+            </dt>
 
-    </dl>
+            <dd>
+                @Html.DisplayFor(Function(model) model.ENTRENADORES.ENT_NOMBRE)
+            </dd>
+
+        </dl>
+    </div>
+
+    <p>
+         @*@Html.ActionLink("Edit", "Edit", New With {.id = Model.PrimaryKey}) |*@
+        <p class="btn btn-block btn-dark mt-2 mb-2 text-white">
+            @Html.ActionLink("Regresar a la Lista", "Index")
+        </p>
+    </p>
 </div>
-<p>
-    @*@Html.ActionLink("Edit", "Edit", New With {.id = Model.PrimaryKey}) |*@
-    @Html.ActionLink("Back to List", "Index")
-</p>

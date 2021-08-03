@@ -3,6 +3,7 @@
 ViewData("Title") = "Index"
 Layout = "~/Views/Shared/_Layout.vbhtml"
 End Code
+
 <div class="container mt-5 pt-5 pb-5">
     <h2 class="text-center">LISTA DE CLIENTES REGISTRADOS</h2>
     <link href="~/Content/css/owl.carousel.min.css" rel="stylesheet" />
@@ -53,9 +54,7 @@ End Code
                     </p>
                     <p class="btn btn-block btn-danger mt-2 mb-2 text-white">
                         @Html.ActionLink("Eliminar", "Delete", New With {.id = item.CLI_ID})
-                    </p>
-
-                    
+                    </p>                    
                 </td>
             </tr>
         Next

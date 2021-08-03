@@ -14,7 +14,7 @@ End Code
             <hr />
             @Html.ValidationSummary(True, "", New With {.class = "text-danger"})
             <div class="form-group">
-                @Html.LabelFor(Function(model) model.EST_ID, "ESTABLCIMIENTO", htmlAttributes:=New With {.class = "control-label col-md-2"})
+                @Html.LabelFor(Function(model) model.EST_ID, "ESTABLECIMIENTO", htmlAttributes:=New With {.class = "control-label col-md-2"})
                 <div class="col-md-10">
                     @Html.DropDownList("EST_ID", Nothing, htmlAttributes:=New With {.class = "form-control"})
                     @Html.ValidationMessageFor(Function(model) model.EST_ID, "", New With {.class = "text-danger"})

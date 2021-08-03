@@ -71,7 +71,7 @@ End Code
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-block btn-success mt-2 mb-2 text-white" />
+                    <input type="submit" value="Crear" class="btn btn-block btn-success mt-2 mb-2 text-white" />
                 </div>
             </div>
         </div>

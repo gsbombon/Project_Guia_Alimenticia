@@ -1,51 +1,60 @@
-﻿@ModelType GUIA_PROJECT.ENTRENAMIENTO
+﻿@ModelType GUIA_PROJECT.TIPO_EJERCICIO
 @Code
     ViewData("Title") = "Delete"
     Layout = "~/Views/Shared/_Layout.vbhtml"
 End Code
 <div class="container mt-5 pt-5 pb-5">
 
-    <h2>ELIMINAR ENTRENAMIENTO</h2>
+    <h2>ELIMINAR TIPO EJERCICIO</h2>
 
-    <h3>Seguro desea eliminar el entrenamiento ? </h3>
+    <h3>Seguro desea eliminar el tipo de ejercicio ? </h3>
     <div>
-        <h4>ENTRENAMIENTO</h4>
         <hr />
         <dl class="dl-horizontal">
             <dt>
-                FECHA
+                DESCRIPCION
             </dt>
+
             <dd>
-                @Html.DisplayFor(Function(model) model.FECHA)
+                @Html.DisplayFor(Function(model) model.EP_EJER_DESCRIPCION)
             </dd>
+
             <dt>
-                NOMBRE CLIENTE
+                CALORIAS GASTADAS
             </dt>
+
             <dd>
-                @Html.DisplayFor(Function(model) model.CLIENTE.CLI_NOMBRE)
+                @Html.DisplayFor(Function(model) model.CALORIAS_GASTADAS)
             </dd>
+
             <dt>
-                DIETA
+                ENFOQUE
             </dt>
+
             <dd>
-                @Html.DisplayFor(Function(model) model.DIETA.NOMBRE_DIETA)
+                @Html.DisplayFor(Function(model) model.ENFOQUE)
             </dd>
+
             <dt>
-                RUTINA
+                ESTADO
             </dt>
+
+            <dd>
+                @Html.DisplayFor(Function(model) model.ESTADO)
+            </dd>
+
+            <dt>
+                EJERCICIO RUTINAS
+            </dt>
+
             <dd>
                 @Html.DisplayFor(Function(model) model.EJERCICIO.EJER_RUTINA)
-            </dd>
-            <dt>
-                NOMBRE ENTRENADOR
-            </dt>
-            <dd>
-                @Html.DisplayFor(Function(model) model.ENTRENADORES.ENT_NOMBRE)
             </dd>
 
         </dl>
         @Using (Html.BeginForm())
             @Html.AntiForgeryToken()
+
             @<div class="form-actions no-color">
                 <input type="submit" value="Delete" class="btn btn-block btn-danger mt-2 mb-2 text-white" />
                 <p class="btn btn-block btn-dark mt-2 mb-2 text-white">

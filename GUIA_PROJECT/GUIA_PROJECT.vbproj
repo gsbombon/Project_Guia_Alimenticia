@@ -171,6 +171,7 @@
     <Compile Include="Controllers\CLIENTEsController.vb" />
     <Compile Include="Controllers\ENTRENADORESController.vb" />
     <Compile Include="Controllers\ENTRENAMIENTOesController.vb" />
+    <Compile Include="Controllers\TIPO_EJERCICIOController.vb" />
     <Compile Include="DIETA.vb">
       <DependentUpon>ModelGuiaEntrenamiento.tt</DependentUpon>
     </Compile>
@@ -374,6 +375,11 @@
     <Content Include="Views\Shared\_navigator.vbhtml" />
     <Content Include="Views\Shared\_footer.vbhtml" />
     <Content Include="Views\Shared\_navTemp.vbhtml" />
+    <Content Include="Views\TIPO_EJERCICIO\Create.vbhtml" />
+    <Content Include="Views\TIPO_EJERCICIO\Delete.vbhtml" />
+    <Content Include="Views\TIPO_EJERCICIO\Details.vbhtml" />
+    <Content Include="Views\TIPO_EJERCICIO\Edit.vbhtml" />
+    <Content Include="Views\TIPO_EJERCICIO\Index.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

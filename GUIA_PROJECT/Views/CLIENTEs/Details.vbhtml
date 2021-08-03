@@ -60,10 +60,10 @@ End Code
     </div>
     <p>
         <p class="btn btn-block btn-warning mt-2 mb-2 text-white">
-            @Html.ActionLink("Edit", "Edit", New With {.id = Model.CLI_ID}) 
+            @Html.ActionLink("Editar", "Edit", New With {.id = Model.CLI_ID}) 
         </p>
         <p class="btn btn-block btn-dark mt-2 mb-2 text-white">
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Regresar a la Lista", "Index")
         </p>
     
     </p>
