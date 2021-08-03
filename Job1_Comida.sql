@@ -1,0 +1,34 @@
+USE [GUIA_ENTRENAMIENTO]
+GO
+
+declare @Existingdate datetime
+Set @Existingdate=GETDATE()
+Select CONVERT(varchar,@Existingdate,24) as [hh:mm:ss]
+SELECT * FROM COMIDA
+
+IF (Select CONVERT(varchar,@Existingdate,24)) BETWEEN '00:01:00' AND '12:00:00'
+	UPDATE [dbo].[COMIDA] 
+		SET [COM_ESTADO] = 1 
+		WHERE COM_HORARIO='DESAYUNO' 
+ELSE 
+	UPDATE [dbo].[COMIDA] 
+		SET [COM_ESTADO] = 0 
+		WHERE COM_HORARIO='DESAYUNO'
+	IF (Select CONVERT(varchar,@Existingdate,24)) BETWEEN '12:01:00' AND '20:00:00'
+		UPDATE [dbo].[COMIDA] 
+			SET [COM_ESTADO] = 1 
+			WHERE COM_HORARIO='ALMUERZO' 
+	ELSE 
+		UPDATE [dbo].[COMIDA] 
+			SET [COM_ESTADO] = 0 
+			WHERE COM_HORARIO='ALMUERZO'
+		IF (Select CONVERT(varchar,@Existingdate,24)) BETWEEN '20:01:00' AND '23:59:00'
+			UPDATE [dbo].[COMIDA] 
+				SET [COM_ESTADO] = 1 
+				WHERE COM_HORARIO='CENA' 
+		ELSE
+			UPDATE [dbo].[COMIDA] 
+				SET [COM_ESTADO] = 0 
+				WHERE COM_HORARIO='CENA' 
+
+SELECT * FROM COMIDA

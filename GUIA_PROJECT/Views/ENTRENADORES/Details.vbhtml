@@ -7,7 +7,6 @@ End Code
 
 <div class="container mt-5 pt-5 pb-5">
 
-
     <h2>DETALLES DEL CLIENTE</h2>
 
     <div>
